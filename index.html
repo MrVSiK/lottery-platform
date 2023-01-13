@@ -5,17 +5,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lottery</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        body {
+            background-color: #0e0e15;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        #guess {
+            margin-bottom: 5rem;
+            width: 40rem;
+            text-align: center;
+        }
+
+        #div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 1.5rem;
+        }
+
+        input {
+            width: 15rem;
+            height: 2rem;
+            font-size: 1.5rem;
+            margin: 1.5rem;
+            color: #0e0e15;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        input::placeholder {
+            color: #0e0e15;
+        }
+
+        button {
+            padding: 0.75rem 0;
+            width: 15rem;
+            background-color: #5f2eea;
+            font-size: 1rem;
+            border: none;
+            border-radius: 20px;
+        }
+    </style>
 </head>
 <body>
 
     <h1 id="guess">Guess if the next number is higher or lower than : </h1>
 
-    <div>
-        <label for="number">Enter a guess</label>
-        <input type="text" name="number" id="number" placeholder="l or h">
-    </div>
+    <form id="form">
+        <div id="div">
+            <label for="number">Enter a guess</label>
+            <input type="text" name="number" id="number" placeholder="l or h">
+        </div>
 
-    <button id="btn">Enter</button>
+        <button id="btn">Enter</button>
+    </form>
 
     <script>
         let prev = -1;
